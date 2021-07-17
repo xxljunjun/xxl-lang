@@ -1,13 +1,13 @@
 // 导入组件，组件必须声明 name
-import animateWave from './src/animate-wave.vue'
+import pop from './src/pop.vue'
 
 // 为组件提供 install 安装方法，供按需引入
-animateWave.install = function (Vue) {
+pop.install = function (Vue) {
 	if (!Vue) {
 		window.Vue = Vue
 	}
-	Vue.component(animateWave.name, animateWave)
+	Vue.component(pop.name, pop)
 }
 
 // 默认导出组件
-export default animateWave
+export default pop

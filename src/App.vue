@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Xxl title="111111" :cancleBack="cancle" :comfireBack="comfire">
+      <template slot="content"> 2222222222222222 </template>
+    </Xxl>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Xxl from '../modules/src/pop.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Xxl,
+  },
+  methods: {
+    cancle() {
+      console.log('取消')
+    },
+    comfire() {
+      console.log('确认')
+    },
+  },
 }
 </script>
 
 <style>
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #000;
 }
 </style>

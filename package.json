@@ -1,11 +1,15 @@
 {
   "name": "xxl-lang",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "decription": "弹窗",
+  "main": "lib/pop.umd.min",
+  "keyword": "pop pop",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name pop --dest lib modules/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
