@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <Xxl title="111111" :cancleBack="cancle" :comfireBack="comfire">
+    <pop title="111111" :cancleBack="cancle" :comfireBack="comfire">
       <template slot="content"> 2222222222222222 </template>
-    </Xxl>
+    </pop>
   </div>
 </template>
 
 <script>
-import Xxl from '../modules/src/pop.vue'
 export default {
   name: 'App',
-  components: {
-    Xxl,
-  },
+  components: {},
   methods: {
     cancle() {
       console.log('取消')

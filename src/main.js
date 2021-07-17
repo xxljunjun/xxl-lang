@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-// import animateWave from './../modules/index'
-// Vue.use(animateWave)
+import pop from './../modules/index'
+Vue.use(pop)
 
 Vue.config.productionTip = false
 

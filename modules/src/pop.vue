@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: 'pop',
   props: {
     title: {
       type: String,
