@@ -1,5 +1,5 @@
 <template>
-  <div class="main" v-if="popStatus">
+  <div class="main" v-if="isShow">
     <div class="mask" @click="close"></div>
     <div class="box">
       <div class="title">{{ title }}</div>
@@ -18,14 +18,26 @@
 </template>
 
 <script>
+/**
+ * 弹窗组件
+ * @description 该组件是仿elementUI的弹窗组件
+ * @property {Boolen} isShow 是否弹出组件
+ * @property {Boolen} title 是否中奖以及是否已经领奖
+ * @property {Array} cancleBack 关闭弹窗的回调函数
+ * @property {Object} comfireBack 确认弹窗的回调函数
+ * @example 用法
+ */
 export default {
   name: 'pop',
   props: {
+    isShow: {
+      type: Boolean,
+      default: true,
+    },
     title: {
       type: String,
       default: '我是标题',
     },
-    // 自定义关闭逻辑
     cancleBack: {
       type: Function,
       default: null,
@@ -34,10 +46,6 @@ export default {
       type: Function,
       default: null,
     },
-    // radius: {
-    //   type: String,
-    //   default: "10px",
-    // },
   },
   data() {
     return {
@@ -47,29 +55,21 @@ export default {
   methods: {
     close() {
       if (typeof this.cancleBack === 'function') {
-        this.popStatus = false
         this.cancleBack()
-      } else {
-        window.history.back()
       }
-      this.popStatus = false
+      this.$emit('update:isShow', false)
     },
     cancle() {
       if (typeof this.cancleBack === 'function') {
-        this.popStatus = false
         this.cancleBack()
-      } else {
-        window.history.back()
       }
-      this.popStatus = false
+      this.$emit('update:isShow', false)
     },
     comfire() {
       if (typeof this.comfireBack === 'function') {
-        this.popStatus = false
         this.comfireBack()
-      } else {
-        this.popStatus = false
       }
+      this.$emit('update:isShow', false)
     },
   },
   components: {},
