@@ -8,6 +8,7 @@
     >
       <template slot="content"> 我是内容 </template>
     </pop>
+    <button @click="popShowStatus = !popShowStatus">点我弹出</button>
   </div>
 </template>
 

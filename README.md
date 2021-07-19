@@ -38,12 +38,12 @@ export default {
 #### Attributes
 参数|说明|类型|可选值|默认值
 :-|:-|:-|:-|:-
-/title|标题|String|-|我是标题
-/isShow|是否显示 pop，支持 .sync 修饰符|Boolean|-|true
+title|标题|String|-|我是标题
+isShow|是否显示 pop，支持 .sync 修饰符|Boolean|-|true
 
 #### Events
 时间名称|说明|回调参数
 :-|:-|:-
-/cancleBack|pop关闭的回调|-
-/comfireBack|pop打开的回调|-
+cancleBack|pop关闭的回调|-
+comfireBack|pop打开的回调|-
 

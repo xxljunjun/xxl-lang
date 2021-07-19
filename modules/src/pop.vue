@@ -21,10 +21,10 @@
 /**
  * 弹窗组件
  * @description 该组件是仿elementUI的弹窗组件
- * @property {Boolen} isShow 是否弹出组件
- * @property {Boolen} title 是否中奖以及是否已经领奖
- * @property {Array} cancleBack 关闭弹窗的回调函数
- * @property {Object} comfireBack 确认弹窗的回调函数
+ * @property {Boolean} isShow 是否弹出组件
+ * @property {String} title 是否中奖以及是否已经领奖
+ * @property {Function} cancleBack 关闭弹窗的回调函数
+ * @property {Function} comfireBack 确认弹窗的回调函数
  * @example 用法
  */
 export default {
@@ -33,18 +33,22 @@ export default {
     isShow: {
       type: Boolean,
       default: false,
+      require: true,
     },
     title: {
       type: String,
       default: '我是标题',
+      require: false,
     },
     cancleBack: {
       type: Function,
       default: null,
+      require: false,
     },
     comfireBack: {
       type: Function,
       default: null,
+      require: false,
     },
   },
   data() {
