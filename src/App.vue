@@ -16,7 +16,7 @@ export default {
   name: 'App',
   data() {
     return {
-      popShowStatus: true,
+      popShowStatus: false,
     }
   },
   components: {},
